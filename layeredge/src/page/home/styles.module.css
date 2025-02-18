@@ -1,0 +1,6 @@
+.container {
+    color: cyan;
+}
+.container>button {
+    color: red;
+}
