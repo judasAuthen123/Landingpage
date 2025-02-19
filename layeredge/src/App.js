@@ -1,9 +1,13 @@
-import logo from './logo.svg';
+import React, { } from 'react';
 import './App.css';
 import Navigator from './util/Navigator';
 function App() {
   return (
-    <Navigator />
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <Navigator />
+      </div>
+    </div>
   );
 }
 

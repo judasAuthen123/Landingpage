@@ -1,0 +1,39 @@
+.container {
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    width: max-content;
+}
+.container.bounce {
+    animation: bounce 0.3s forwards;
+}
+.container>button {
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.container:hover::before{
+    opacity: 1;
+}
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(172, 172, 172, 0.4), rgba(83, 83, 83, 0.4));
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0; /* Ẩn ban đầu */
+}
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.94);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

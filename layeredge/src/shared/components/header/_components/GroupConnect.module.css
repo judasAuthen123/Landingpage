@@ -1,0 +1,32 @@
+:root {
+    --opacity-olor: rgba(230, 230, 230, 0.478)
+}
+.container {
+    width: 325px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.container>img {
+    width: 155px;
+    height: 43px;
+}
+.container .viewConnect {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    right: 0;
+    top: 50%;
+    transform: translateY(-35%);
+    column-gap: 19px;
+    position: absolute;
+}
+.container .viewConnect .icon {
+    font-size: 22px;
+    color: var(--opacity-olor);
+    transition: color 0.28s ease-in-out;
+    cursor: pointer;
+}
+.container .viewConnect .icon:hover {
+    color: white;
+}

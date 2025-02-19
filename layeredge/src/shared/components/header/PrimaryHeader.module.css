@@ -1,0 +1,65 @@
+
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0;
+    background: linear-gradient(to bottom, black 15%, rgba(0, 0, 0, 0.951) 35%, rgba(0, 0, 0, 0.71) 75%, rgba(0, 0, 0, 0));
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    animation: slideToBottom 0.75s forwards;
+}
+.container .content {
+    width: 72.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .content .boxMoving {
+    display: flex;
+    align-items: center;
+    column-gap: 35px;
+}
+.container .content .boxMoving .button {
+    font-size: 15px;
+    color: white;
+    padding: 10px 20px;
+}
+.container .content .boxMoving>a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+    padding: 7px 12px;
+    border-radius: 20px;
+}
+.container .content .boxMoving>a:hover {
+    background-color: rgba(85, 85, 85, 0.295);
+}
+@keyframes slideToBottom {
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@media (max-width: 1250px) {
+    .container .content {
+        width: 95%;
+    }
+}
+@media (max-width: 950px) {
+    .container {
+        padding: 10px 0;
+    }
+    .container .content .boxMoving {
+        display: none;
+    }
+}
